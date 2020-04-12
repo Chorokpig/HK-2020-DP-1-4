@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>나혼자 순천</title>
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Noto+Sans+KR:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+	<style type="text/css">
+		/*기본 css*/
+		html {
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+		body, p, h1, h2, h3, img, footer, section, div{
+			margin: 0px;
+			padding: 0px;
+			height: 100%;
+		}
+		header {
+			background-image: url(img/0.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			padding: 20px;
+			margin-bottom: 200px;
+			width: auto;
+			height: 700px;
+			
+		}
+		main{
+			margin: 0px auto;
+			width: 800px 100%;
+			height: auto;
+		}
+		section{
+			margin-top: 200px;
+			
+		}
+		h1 {
+			text-align: center;
+			font-weight: 600;
+			font-size: 4em;
+			margin-top: 100px;
+			margin-bottom: 50px;
+		}
+		p{
+			font-size: 1.2em;
+			width: 800px;
+			margin: auto;
+			margin-bottom: 50px;
+			line-height: 1.8;
+		}
+		mark{
+			background-color: skyblue;
+			color:darkslateblue;
+		}
+		footer{
+			background-color: #000000;
+			padding-top: 100px;
+		}
+		.three mark{
+			background-color:peachpuff;
+			color: darkred;
+		}
+		.four h1{
+			font-size: 8em;
+		}
+		.img{
+			width: 900px;
+			height: auto;
+			display: block;
+			text-align: center;
+			margin: 0 auto;
+			margin-bottom: 50px;
+			margin-top: 70px;
+			}
+		.double{
+			width: 800px;
+			margin: auto;
+			margin-bottom: 30px;
+			height: auto;
+		}
+		.smallimg{
+			width: 40%;
+			height: auto;
+			display: box;
+			margin-top: 5px;
+		}
+		.smalltxt{
+			width: 58%;
+			height: auto;
+			margin: 0;
+		}
+		.epilogue{
+			background-color: #000000;
+			color: #ffffff;
+		}
+		header .logo{
+			display: block;
+			margin: 0px;
+			margin-top: 350px;
+			margin-left: 50px;
+			width: 250px;
+			height: auto;
+		}
+		.ps{
+			width: 300px;
+			text-align: right;
+			float: right;
+			margin-right: 30%;
+			margin-top: 200px
+		}
+		.ps img{
+			width: 300px;
+		}
+		.ps p{ width: 300px;}
+		/*기본css 끝*/
+
+		/*네비게이션 스크롤 연습해보기*/
+		   * { box-sizing: border-box;}
+		.navbar {
+			position: fixed;
+			z-index: 999;
+			top: 50%;
+			right: 100px;
+			transform: translateY(-50%);
+		}
+
+		.navbar .nav-menu {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+
+		.navbar .nav-menu li {
+			position: relative;
+			min-width: 200px;
+			text-align: right;
+		}
+
+		.navbar .nav-menu li .dot {
+			display: block;
+			color: #fff;
+			padding: 5px 0;
+		}
+
+		.navbar .nav-menu li .dot::before,
+		.navbar .nav-menu li .dot::after {
+			display: block;
+			position: absolute;
+			content: '';
+			border-radius: 50%;
+			top: 50%;
+			transition: all .3s ease;
+		}
+
+		.navbar .nav-menu li .dot::before {
+			width: 5px;
+			height: 5px;
+			right: 0;
+			border: 2px solid #181818;
+			transform: translateY(-50%);
+		}
+
+		.navbar .nav-menu li .dot::after {
+			width: 15px;
+			height: 15px;
+			border: 2px solid skyblue;
+			right: -5px;
+			transform: translateY(-50%) scale(0);
+		}
+
+		.navbar .nav-menu li .dot.active::before,
+		.navbar .nav-menu li:hover .dot::before {
+			background: skyblue;
+			border-color: skyblue;
+		}
+
+		.navbar .nav-menu li .dot.active::after,
+		.navbar .nav-menu li:hover .dot::after {
+			transform: translateY(-50%) scale(1);
+		}
+
+		.navbar .nav-menu li .dot span {
+			display: inline-block;
+			opacity: 0;
+			font-weight: 500;
+			letter-spacing: .5px;
+			text-transform: capitalize;
+			background-color: skyblue;
+			padding: 10px 20px;
+			border-radius: 15px;
+			margin-right: 30px;
+			transform: translateX(20px);
+			transition: all .3s ease;
+		}
+
+		.navbar .nav-menu li .dot span::before {
+			display: block;
+			position: absolute;
+			content: '';
+			border-left: 7px solid skyblue;
+			border-top: 7px solid transparent;
+			border-bottom: 7px solid transparent;
+			top: 50%;
+			transform: translate(7px, -50%);
+			right: 0;
+			transition: all .3s ease;
+		}
+
+		.navbar .nav-menu li .dot.active span,
+		.navbar .nav-menu li:hover .dot span {
+			transform: translateX(0px);
+			opacity: 1;
+		}
+		/*네비게이션 css 끝*/
+
+
+		   
+	</style>
+</head>
+<body>
+	
+	<div class="wrap">
+		<header>
+			<img src="img/0-1.png" class="logo" style="">
+			<nav id="navbar" class="navbar">
+				<ul class="nav-menu">
+					<li>
+						<a href="#one" class="dot">
+							<span>방구석 라이프를 벗어나</span>
+						</a>
+					</li>
+					<li>
+						<a href="#two" class="dot">
+							<span>가깝고도 먼 순천</span>
+						</a>
+					</li>
+					<li>
+						<a href="#three" class="dot">
+							<span>순천만의 노을을 위해</span>
+						</a>
+					</li>
+					<li>
+						<a href="#four" class="dot">
+							<span>그리고 마침내</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+		<section id="one">
+			<h1><mark>방구석 라이프</mark>를 벗어나</h1>
+			<p>혼자 순천여행을 계획한건 개강을 약 1개월을 앞뒀을 때, 하루종일 방구속에 쳐박혀 아무것도 하지 않던 스스로가 한심하다는 생각이 들 때 쯤이였다. 사실 계획도 없었다. 그저 네이버로 괜찮아보이는 게스트 하우스 하나를 예약하고 가방에 짐을 눌러담은 후 전주역으로 나섰다.</p>
+			<img src="img/1.jpg" class="img">
+			<p>열차 시간도 알아보지 않은 채, 버스를 타고 전주역에 온 후 가장 빠른 시간의 열차를 예매하고 플랫폼에 올라섰다. 지금은 상상도 못할 여행이였지만, 당시엔 국내 코로나 확진자가 20명정도에 불과했기 때문에 역에는 평일임에도 다른 여행객이 많이 보였다.</p>
+			<img src="img/2.jpg" class="img">
+			<p>짧은 기다림 끝에 내가 탈 열차가 도착하였고, 티켓을 확인 후 열차에 몸을 실었다. 간만의 기차여행이라 그런건지 간만의 여행이라 그런건지 설렘과 걱정이 같이 느껴졌다. 기차 안 대부분의 사람이 마스크를 쓴 채로 각자의 할 일에 몰두하고 있었다.</p>
+		</section>
+		<section id="two">
+			<h1>가깝고 먼, <mark>순천</mark></h1>
+			<p>순천은 전주에서 비교적 가까운 거리지만 갈 일이 별로 없는 도시였다. 당일치기로 가기엔 생각보다 거리가 멀었고 1박 2일로 가기엔 근처에 더 나은 관광도시인 여수가 있었다. 그래서 이번이 아니면 순천에 가기 힘들겠다 싶어 순천에 가기로 선택한 것이였다. </p>
+			<img src="img/3.jpg" class="img">
+			<p>약 1시간 반정도가 지나 순천에 도착하였다. 순천역은 생각보다 아담했고, 안에선 도착한 사람과 떠나는 사람들이 바쁘게 움직이고 있었다. 나 또한 점심쯤에 도착했기에 원활한 여행을 위해 게스트 하우스에 짐을 맡기러 발걸음을 빠르게 옮겼다.</p>
+			<img src="img/4.jpg" class="img">
+			<p>게스트하우스는 인터넷에서 확인했던 것처럼 아담한 크기였다. 1층에 있는 카페에서 사장님이 오늘 예약자가 한 명이라 방을 혼자 쓰게 될 것이라는 희소식과 함께 맞아주셨다. 4인실을 혼자쓰게 된것은 내 입장에서는 희소식이였지만 사장님의 입장에선 비극이였을 것이다. 나중에 조식을 먹으며 이야기를 들어보니 모처럼 조류독감이 유행하지 않아 순천만에 관광객이 많이오려나 했더니 예상치도 못한 코로나가 터졌다고 골치 아프다고 하셨다. </p>
+			<img src="img/5.jpg" class="img">
+			<div class="double">
+				<img src="img/5-1.jpg" class="smallimg" style="float: right;">
+				<p class="smalltxt">게스트하우스에 짐을 놓고 제일 먼저 간 곳은 근처에 있단 철도문화마을이였다. 원래의 계획은 순천만으로 바로 가는 것이였지만 순천만에 바로 가기엔 조금 애매한 시간이였기에 이곳을 먼저 들리게 되었다. 점심을 먹고 후식을 먹을 겸 근처에 있던 카페에서 고구마 라떼를 주문하여 마셨는데, 위에 올려져 있던 시나몬 가루 때문인지 여태까지 먹은 고구마 라떼중 제일 맛있었다.</p>
+			</div>
+			<div class="double" style="height: 500px;">
+				<img src="img/6.jpg" class="smallimg" style="float: left;">
+				<p class="smalltxt" style="float: right;">카페에서 시간을 좀 보낸 후 향한 곳은 근처의 전망대 가는 길이였다. 다른 관광지에 있는 벽화마을급은 아니더라도 이쁘게 꾸며져 있는 계단이 있다고 해 굳이 찾아서까지 갔는데 굉장히 실망스러웠다. 특히 계절탓인지 코로나탓인지 나를 제외한 다른 관광객이 없어 그런지 요리조리 계단사진을 찍는 나를 뚫어져라 쳐다보는 주민 분이 있어 민망하기까지 했다. 생각보다 높은 계단을 올라가니 지은지 얼마 안된 것 처럼 보이는 전망대가 있었지만 순천이 큰 도시가 아니라 그런지 생각보다 뷰가 별로였고, 어느 지자체에서 급조한 관광지가 그렇듯 별 볼게 없어 서둘러 내려왔다. 실망스러웠던 전망대를 내려온 후에 순천만을 가기 위에 순천 시내를 흐르는 동천을 따라 걸으며 버스정류장으로 향했다.</p>
+			</div>
+		</section>
+		<section id="three" class="three">
+			<h1><mark>순천만의 노을</mark>을 위해</h1>
+			<img src="img/7.jpg" class="img">
+			<p>순천만 습지에서 노을을 보기 위해선 일찍 가는게 좋다는 게스트하우스 사장님의 말을 따라 순천만 국가정원을 빠르게 스캔한뒤 순천만 습지로 향했다. 순천만 습지로 가는 길은 해가 따스해서 그런지 2월치고 별로 춥지 않아 걷기 좋았다.</p>
+			<img src="img/8.jpg" class="img">
+			<p>모노레일에서 내려 약 20분을 걸어 도착한 순천만 습지는 하늘이 맑고 바람이 적당해 겨울임에도 정말 화사했다. 기분좋게 바람을 맞으며 걸어가다 본 표지판엔 불행한 소식이 있었다. 노을을 보기 위해선 전망대를 올라야 했고, 전망대는 생각보다 높은 곳에 있었다. 노을 사진 하나를 찍겠다고 땀을 흘리며 전망대를 올랐으나..</p>
+			<img src="img/9.jpg" class="img">
+			<p>일찍 출발한다고 출발한 것이 너무 이른 시간이였고, 겨울에도 오후 4시는 해가 지기엔 너무 이른 시간이였다. 다시 내려가면 노을질때 쯤 전망대를 다시 올라야 한다는 생각이 내 발목을 잡았고, 결국 전망대에서 찬 바람이 부는 2시간 동안 책을 보며 어떻게든 버텨보기로 했다. 1시간도 안되어서 몸에서 산을 오를때의 온기가 빠져나갔고 책에는 집중이 안되기 시작했다. 마음속으로 지금 내려가긴 늦었어를 되내이며 어떻게든 버티려 노력하였다.</p>
+		</section>
+		<section id="four" class="four">
+			<h1 style="margin-top: 500px; line-height: 1.1;">그리고<br>마침내</h1>
+		</main>
+		<section class="epilogue">
+			<img src="img/10.jpg" style="margin: 0 auto; width: 100%; height: auto; ">
+			<p style="margin-top: 150px;">2시간을 기다린 끝에 만족스러운 노을 사진을 찍은 후 해가 지기전에 빠르게 전망대를 내려왔다. 전망대를 다 내려왔을 즈음엔 어느새 사방이 어두웠고 갈대밭 너머에서 몇몇 사람들이 얘기를 나누며 걸어가는 소리와 새 소리 말고는 아무런 소리도 들리지 않았다. 나도 순천만습지에서 숙소로 돌아가기 위해 어둠속에서 눈을 부릅뜨고 버스정류장으로 걸음을 옮겼다. </p>
+			<img src="img/11.jpg" class="img">
+			<p style="margin-bottom: 0px; padding-bottom: 50px;">이렇게 급하게 숙소를 예약하고 일정을 짰던 1박2일 순천여행은 실질적인 일정이 마무리 되었고 숙소에 돌아가 쉰 다음 전주로 돌아갈 일만 남겨두었다. 아무런 계획 없이 출발했던 여행치고 알찬 여행이 되어 뿌듯했던 여행이였다.</p>
+			<div class="ps">
+				<h2>P.S</h2>
+				<img src="img/12.jpg">
+				<p>여행의 마무리는 든든한 국밥.</p>
+			</div>
+				
+		</section>
+		<footer>
+			<hr style="width: 60%; color: #ffffff; text-align: center; margin : 0 auto; ">
+			<p style="font-size: 10pt; color: #ffffff; text-align: right; margin-bottom: 0; padding-bottom: 50px;">copyright 2020. Son Jong In. All rights reserved. Thank you.</p>
+		</footer>
+	</div>
+</body>
+</html>
